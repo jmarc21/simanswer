@@ -9,7 +9,7 @@ const cors = require('cors')
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(`${__dirname}/../public/build`));//so you dont have to use npm start and nodemon just nodemon
+// app.use(express.static(`${__dirname}/../public/build`));//so you dont have to use npm start and nodemon just nodemon
 const controller = require('./controller')
 
 app.get('/api/shelf/:id', controller.shelf),
